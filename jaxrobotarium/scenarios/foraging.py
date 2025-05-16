@@ -11,7 +11,7 @@ except Exception as e:
 
 class Foraging(RobotariumEnv):
     def __init__(self, num_agents, max_steps=70, **kwargs):
-        self.name = 'MARBLER_foraging'
+        self.name = 'foraging'
         self.backend = kwargs.get('backend', 'jax')
 
         self.forage_radius = 0.3

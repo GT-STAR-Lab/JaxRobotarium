@@ -10,7 +10,7 @@ except Exception as e:
 
 class Discovery(RobotariumEnv):
     def __init__(self, num_agents, max_steps=80, **kwargs):
-        self.name = 'MARBLER_het_discovery'
+        self.name = 'het_discovery'
         self.backend = kwargs.get('backend', 'jax')
 
         self.num_landmarks = kwargs.get('num_landmarks', 6)

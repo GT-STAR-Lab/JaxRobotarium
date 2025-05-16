@@ -10,7 +10,7 @@ except Exception as e:
 
 class ArcticTransport(RobotariumEnv):
     def __init__(self, num_agents, max_steps=80, **kwargs):
-        self.name = 'MARBLER_arctic_transport'
+        self.name = 'arctic_transport'
         self.backend = kwargs.get('backend', 'jax')
 
         # Arctic transport specific constraint at the moment

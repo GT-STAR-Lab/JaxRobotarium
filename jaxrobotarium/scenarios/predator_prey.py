@@ -10,7 +10,7 @@ except Exception as e:
 
 class PredatorPrey(RobotariumEnv):
     def __init__(self, num_agents, max_steps=80, **kwargs):
-        self.name = 'MARBLER_predator_prey'
+        self.name = 'predator_prey'
         self.backend = kwargs.get('backend', 'jax')
 
         # Predator tag radius

@@ -10,7 +10,7 @@ except Exception as e:
 
 class Navigation(RobotariumEnv):
     def __init__(self, num_agents, max_steps=50, **kwargs):
-        self.name = 'MARBLER_navigation'
+        self.name = 'navigation'
         self.backend = kwargs.get('backend', 'jax')
 
         if self.backend == 'jax':

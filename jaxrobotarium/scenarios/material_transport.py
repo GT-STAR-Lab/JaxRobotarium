@@ -10,7 +10,7 @@ except Exception as e:
 
 class MaterialTransport(RobotariumEnv):
     def __init__(self, num_agents, max_steps=70, **kwargs):
-        self.name = 'MARBLER_material_transport'
+        self.name = 'material_transport'
         self.backend = kwargs.get('backend', 'jax')
 
         # Heterogeneity

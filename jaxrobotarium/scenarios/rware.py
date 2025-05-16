@@ -10,7 +10,7 @@ except Exception as e:
 
 class RWARE(RobotariumEnv):
     def __init__(self, num_agents, max_steps=70, **kwargs):
-        self.name = 'MARBLER_rware'
+        self.name = 'rware'
         self.backend = kwargs.get('backend', 'jax')
 
         self.num_cells = kwargs.get('num_cells', 8) # NOTE: this needs to be even right now

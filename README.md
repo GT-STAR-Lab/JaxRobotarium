@@ -23,7 +23,7 @@
     ```
     pip install -e .
     ```
-2. Install JaxMARL (from top of repo, see https://github.com/GT-STAR-Lab/JaxMARL-Robotarium)
+2. Install JaxMARL (from top of repo, clone into https://github.com/GT-STAR-Lab/JaxMARL-Robotarium/tree/jaxrobotarium-integration)
     ```
     pip install -e .
     ```
@@ -31,7 +31,7 @@
     ```
     pip install nvidia-cuda-runtime-cu12
     ```
-4. Install Jax
+4. Install Jax (this will probably give you pip dependency resolver errors, ignore them)
     ```
     pip install -U "jax[cuda12]==0.5.0"
     ```
@@ -41,7 +41,7 @@
     git submodule init
     git submodule update
     ```
-2. Install (within `jaxrobotarium/robotarium_python_simulator)
+2. Install (within `jaxrobotarium/robotarium_python_simulator`)
     ```
     pip install -e .
     ```
@@ -106,3 +106,6 @@ else:
     super().__init__(num_agents, max_steps, **kwargs)
 ```
 where `initialize_robotarium_state` is specific to the scenario being developed. See `scenarios/navigation.py` for an example.
+
+## Acknowledgements
+We would like to recognize [JaxMARL](https://github.com/FLAIROx/JaxMARL) and [MARBLER](https://github.com/GT-STAR-Lab/MARBLER) for heavily inspiring the design of this repository.

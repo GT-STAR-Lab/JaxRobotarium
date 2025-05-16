@@ -9,7 +9,7 @@
     ```
     # wrap import statement in try-except block to allow for correct import during deployment
     try:
-        from marbler.robotarium_env import *
+        from jaxrobotarium.robotarium_env import *
     except Exception as e:
         from robotarium_env import *
     ```
@@ -43,7 +43,8 @@
     "model_file": # path to actor file
     "model_class": # name of pytorch actor class to import
     ```
-2. Run `python deploy.py --name <experiment_name> --config <config.yaml>` in this directory to generate the folder containing all files necessary for deployment at `robotarium_submissions/<experiment_name>` using configuration in `config.yaml`
+2. Run `python deploy.py --name <experiment_name> --config <config.yaml>` in this directory to generate the folder containing all files necessary for deployment at `robotarium_submissions/<experiment_name>` using configuration in `config.yaml`.
+    - Note: this will not work with the `jaxrobotarium` conda environment activated. We recommend creating a separate deployment environment without `jax` installed, `environment.yaml` coming soon.
 3. Upload files to [Robotarium](https://www.robotarium.gatech.edu/)
     * Create new experiment
     * Set number of robots to match your config file
