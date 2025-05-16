@@ -11,6 +11,13 @@
   <img src="jaxrobotarium/figures/navigation_real.gif" width="53%" /> 
 </p>
 
+## TLDR
+
+JaxRobotarium is an  end-to-end open-source Jax-based platform designed to significantly accelerate the training and deployment of MRRL algorithms while maintaining ease-of-use and open access to hardware-based evaluations.
+
+**Team**: Shalin Anand Jain, Jiazhen Liu, Siva Kailas, Harish Ravichandar
+
+**Preprint**: https://arxiv.org/abs/2505.06771
 
 ## Installation (assumes integration with JaxMARL as platform of choice)
 ### Install Jax and JaxMARL
