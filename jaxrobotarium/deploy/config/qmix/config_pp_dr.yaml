@@ -1,0 +1,25 @@
+"seed": 0
+"backend": "python"
+"preprocess_obs": False
+
+# SCENARIO
+"scenario": "PredatorPrey"
+"scenario_file": "predator_prey.py"
+"num_agents": 3
+"max_steps": 100
+"action_type": "Discrete"
+"number_of_robots": 3
+"controller": "clf_uni_position"
+"barrier_fn": "robust_barriers"
+"update_frequency": 30
+
+# MODEL CONFIG
+"input_dim": 12
+"hidden_dim": 512
+"output_dim": 5
+
+# DEPLOYMENT CONFIG
+"model_weights": "models/qmix/qmix_rnn_predator_prey_dr.safetensors"
+"model_file": "actor.py"
+"model_class": RNNActorQMix
+"save_gif": True

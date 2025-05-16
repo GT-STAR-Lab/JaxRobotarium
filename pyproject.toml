@@ -1,0 +1,34 @@
+[project]
+name = "jaxrobotarium"
+version = "0.1.0"
+description = "Jax-based multi-robot simulation, learning, and deployment environment for the Robotarium."
+authors = [
+    { name = "Shalin Jain", email = "your.email@example.com" }
+]
+license = "MIT"
+readme = "README.md"
+requires-python = ">=3.10"
+keywords = ["robotics", "simulation", "jax", "robotarium"]
+
+dependencies = [
+    "jax",
+    "jaxlib",
+    "flax",
+    "chex",
+    "numpy",
+    "matplotlib",
+    "scipy",
+    "cvxopt",
+    "pyyaml"
+]
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["jaxrobotarium*"]
+
+[tool.setuptools]
+package-dir = {"" = "."}
+
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"

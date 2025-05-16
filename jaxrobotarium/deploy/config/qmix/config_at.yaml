@@ -1,0 +1,31 @@
+"seed": 0
+"backend": "python"
+"preprocess_obs": False
+
+# SCENARIO
+"scenario": "ArcticTransport"
+"scenario_file": "arctic_transport.py"
+"num_agents": 4
+"max_steps": 100
+"action_type": "Discrete"
+"number_of_robots": 4
+"controller": "clf_uni_position"
+"barrier_fn": "robust_barriers"
+"update_frequency": 30
+"heterogeneity": {
+    "type": "class",
+    "obs_type": "class",
+    "values": [[1, 0, 0], [1, 0, 0], [0, 1, 0], [0, 0, 1]],
+    "sample": False,
+}
+
+# MODEL CONFIG
+"input_dim": 34
+"hidden_dim": 256
+"output_dim": 5
+
+# DEPLOYMENT CONFIG
+"model_weights": "models/qmix/qmix_rnn_arctic_transport.safetensors"
+"model_file": "actor.py"
+"model_class": RNNActorQMix
+"save_gif": True

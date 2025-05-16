@@ -1,0 +1,31 @@
+"seed": 0
+"backend": "python"
+"preprocess_obs": False
+
+# SCENARIO
+"scenario": "Warehouse"
+"scenario_file": "warehouse.py"
+"num_agents": 4
+"max_steps": 70
+"action_type": "Discrete"
+"number_of_robots": 4
+"controller": "clf_uni_position"
+"barrier_fn": "robust_barriers"
+"update_frequency": 30
+"heterogeneity": {
+    "type": "class",
+    "obs_type": "class",
+    "values": [[1, 0], [1, 0], [0, 1], [0, 1]],
+    "sample": False,
+}
+
+# MODEL CONFIG
+"input_dim": 14
+"hidden_dim": 256
+"output_dim": 5
+
+# DEPLOYMENT CONFIG
+"model_weights": "models/pqn/pqn_vdn_rnn_warehouse.safetensors"
+"model_file": "actor.py"
+"model_class": RNNActorPQN
+"save_gif": True

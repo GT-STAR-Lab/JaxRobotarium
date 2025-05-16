@@ -1,0 +1,4 @@
+[submodule "jaxrobotarium/robotarium_python_simulator"]
+	path = jaxrobotarium/robotarium_python_simulator
+	url = https://github.com/shalin-jain/robotarium_python_simulator
+    branch = release

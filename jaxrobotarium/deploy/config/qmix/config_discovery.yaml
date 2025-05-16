@@ -1,0 +1,33 @@
+"seed": 0
+"backend": "python"
+"preprocess_obs": False
+
+# SCENARIO
+"scenario": "Discovery"
+"scenario_file": "discovery.py"
+"num_agents": 4
+"num_sensing": 2
+"num_tagging": 2
+"max_steps": 100
+"action_type": "Discrete"
+"number_of_robots": 4
+"controller": "clf_uni_position"
+"barrier_fn": "robust_barriers"
+"update_frequency": 30
+heterogeneity: {
+  "type": "capability_set",
+  "obs_type": "full_capability_set",
+  "values": [[0.45, 0], [0.45, 0], [0, 0.25], [0, 0.25]],
+  "sample": False,
+}
+
+# MODEL CONFIG
+"input_dim": 38
+"hidden_dim": 256
+"output_dim": 5
+
+# DEPLOYMENT CONFIG
+"model_weights": "models/qmix/qmix_rnn_discovery.safetensors"
+"model_file": "actor.py"
+"model_class": RNNActorQMix
+"save_gif": True
